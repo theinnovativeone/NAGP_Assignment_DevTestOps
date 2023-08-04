@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="0" total="6" passed="6" failed="0" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2023-08-05T00:05:27 IST" name="Suite" finished-at="2023-08-05T00:06:51 IST" duration-ms="83996">
+    <groups>
+    </groups>
+    <test started-at="2023-08-05T00:05:27 IST" name="Test" finished-at="2023-08-05T00:06:51 IST" duration-ms="83996">
+      <class name="tests.LoginTest">
+        <test-method is-config="true" signature="setup(org.testng.ITestContext)[pri:0, instance:tests.LoginTest@4b013c76]" started-at="2023-08-05T00:05:27 IST" name="setup" finished-at="2023-08-05T00:05:30 IST" duration-ms="3747" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[org.testng.TestRunner@12d2ddde]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method signature="verifyLoginWithInvalidCredentials()[pri:0, instance:tests.LoginTest@4b013c76]" started-at="2023-08-05T00:05:30 IST" name="verifyLoginWithInvalidCredentials" finished-at="2023-08-05T00:05:31 IST" duration-ms="975" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyLoginWithInvalidCredentials -->
+        <test-method is-config="true" signature="closeDown()[pri:0, instance:tests.LoginTest@4b013c76]" started-at="2023-08-05T00:05:31 IST" name="closeDown" finished-at="2023-08-05T00:05:32 IST" duration-ms="229" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- closeDown -->
+        <test-method is-config="true" signature="setup(org.testng.ITestContext)[pri:0, instance:tests.LoginTest@4b013c76]" started-at="2023-08-05T00:05:32 IST" name="setup" finished-at="2023-08-05T00:05:33 IST" duration-ms="1770" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[org.testng.TestRunner@12d2ddde]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method signature="verifyLoginWithInvalidPassword()[pri:0, instance:tests.LoginTest@4b013c76]" started-at="2023-08-05T00:05:33 IST" name="verifyLoginWithInvalidPassword" finished-at="2023-08-05T00:05:34 IST" duration-ms="965" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyLoginWithInvalidPassword -->
+        <test-method is-config="true" signature="closeDown()[pri:0, instance:tests.LoginTest@4b013c76]" started-at="2023-08-05T00:05:34 IST" name="closeDown" finished-at="2023-08-05T00:05:35 IST" duration-ms="251" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- closeDown -->
+        <test-method is-config="true" signature="setup(org.testng.ITestContext)[pri:0, instance:tests.LoginTest@4b013c76]" started-at="2023-08-05T00:05:35 IST" name="setup" finished-at="2023-08-05T00:05:36 IST" duration-ms="1746" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[org.testng.TestRunner@12d2ddde]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method signature="verifyLoginWithInvalidUsername()[pri:0, instance:tests.LoginTest@4b013c76]" started-at="2023-08-05T00:05:36 IST" name="verifyLoginWithInvalidUsername" finished-at="2023-08-05T00:05:37 IST" duration-ms="943" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyLoginWithInvalidUsername -->
+        <test-method is-config="true" signature="closeDown()[pri:0, instance:tests.LoginTest@4b013c76]" started-at="2023-08-05T00:05:37 IST" name="closeDown" finished-at="2023-08-05T00:05:37 IST" duration-ms="194" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- closeDown -->
+        <test-method is-config="true" signature="setup(org.testng.ITestContext)[pri:0, instance:tests.LoginTest@4b013c76]" started-at="2023-08-05T00:05:37 IST" name="setup" finished-at="2023-08-05T00:05:39 IST" duration-ms="1738" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[org.testng.TestRunner@12d2ddde]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method signature="verifyLoginWithValidCredentials()[pri:0, instance:tests.LoginTest@4b013c76]" started-at="2023-08-05T00:05:39 IST" name="verifyLoginWithValidCredentials" finished-at="2023-08-05T00:05:40 IST" duration-ms="1090" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyLoginWithValidCredentials -->
+        <test-method is-config="true" signature="closeDown()[pri:0, instance:tests.LoginTest@4b013c76]" started-at="2023-08-05T00:05:40 IST" name="closeDown" finished-at="2023-08-05T00:05:41 IST" duration-ms="255" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- closeDown -->
+      </class> <!-- tests.LoginTest -->
+      <class name="tests.AddToCartTest">
+        <test-method is-config="true" signature="setup(org.testng.ITestContext)[pri:0, instance:tests.AddToCartTest@5890e879]" started-at="2023-08-05T00:05:41 IST" name="setup" finished-at="2023-08-05T00:05:43 IST" duration-ms="2481" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[org.testng.TestRunner@12d2ddde]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method signature="verifyAddToCartFunctionality()[pri:0, instance:tests.AddToCartTest@5890e879]" started-at="2023-08-05T00:05:43 IST" name="verifyAddToCartFunctionality" finished-at="2023-08-05T00:05:44 IST" duration-ms="1379" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyAddToCartFunctionality -->
+        <test-method is-config="true" signature="closeDown()[pri:0, instance:tests.AddToCartTest@5890e879]" started-at="2023-08-05T00:05:44 IST" name="closeDown" finished-at="2023-08-05T00:05:45 IST" duration-ms="285" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- closeDown -->
+      </class> <!-- tests.AddToCartTest -->
+      <class name="tests.LogoutTest">
+        <test-method is-config="true" signature="setup(org.testng.ITestContext)[pri:0, instance:tests.LogoutTest@6440112d]" started-at="2023-08-05T00:05:45 IST" name="setup" finished-at="2023-08-05T00:05:47 IST" duration-ms="2274" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[org.testng.TestRunner@12d2ddde]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method signature="verifyAddToCartFunctionality()[pri:0, instance:tests.LogoutTest@6440112d]" started-at="2023-08-05T00:05:47 IST" name="verifyAddToCartFunctionality" finished-at="2023-08-05T00:06:50 IST" duration-ms="63350" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyAddToCartFunctionality -->
+        <test-method is-config="true" signature="closeDown()[pri:0, instance:tests.LogoutTest@6440112d]" started-at="2023-08-05T00:06:50 IST" name="closeDown" finished-at="2023-08-05T00:06:51 IST" duration-ms="253" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- closeDown -->
+      </class> <!-- tests.LogoutTest -->
+    </test> <!-- Test -->
+  </suite> <!-- Suite -->
+</testng-results>
