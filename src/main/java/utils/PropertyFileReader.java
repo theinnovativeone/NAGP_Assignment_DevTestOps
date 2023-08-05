@@ -29,6 +29,26 @@ public class PropertyFileReader {
 		return getValue;
 	}
 	
+//	public static String getBaseData(String val) {
+//		File file=new File("C:\\Users\\snehagupta01\\eclipse-workspace\\NAGP_sampleApplication\\src\\main\\java\\resources\\config.properties");
+//		FileInputStream fis=null;
+//		Properties prop=null;
+//		
+//		try {
+//		 fis = new FileInputStream(file);
+//		 prop= new Properties();
+//		 prop.load(fis);
+//			} 
+//		catch (FileNotFoundException e) {
+//			e.printStackTrace();
+//			}
+//		catch (IOException e) {
+//			e.printStackTrace();
+//			}
+//		getValue=prop.getProperty(val);
+//		return getValue;
+//	}
+
 	public static String getBaseData(String val) {
 		File file=new File("C:\\Users\\snehagupta01\\eclipse-workspace\\NAGP_sampleApplication\\src\\main\\java\\resources\\config.properties");
 		FileInputStream fis=null;

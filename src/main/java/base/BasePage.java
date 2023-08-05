@@ -7,18 +7,18 @@ import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.firefox.FirefoxOptions;
 import org.openqa.selenium.firefox.FirefoxProfile;
 import org.testng.ITestContext;
-
-import com.aventstack.extentreports.ExtentReports;
-import com.aventstack.extentreports.ExtentTest;
-import com.aventstack.extentreports.reporter.ExtentSparkReporter;
-
 import utils.PropertyFileReader;
+//import com.aventstack.extentreports.ExtentReports;
+//import com.aventstack.extentreports.ExtentTest;
+//import com.aventstack.extentreports.reporter.ExtentSparkReporter;
+
+
 
 public class BasePage {
 
-	public static ExtentSparkReporter htmlReporter;
-	public static ExtentReports extent;
-	public static ExtentTest test;
+//	public static ExtentSparkReporter htmlReporter;
+//	public static ExtentReports extent;
+//	public static ExtentTest test;
 	public static WebDriver driver = null;
 	public static String browserName = null;
 	public static String url = null;
