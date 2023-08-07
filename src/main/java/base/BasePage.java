@@ -8,17 +8,9 @@ import org.openqa.selenium.firefox.FirefoxOptions;
 import org.openqa.selenium.firefox.FirefoxProfile;
 import org.testng.ITestContext;
 import utils.PropertyFileReader;
-//import com.aventstack.extentreports.ExtentReports;
-//import com.aventstack.extentreports.ExtentTest;
-//import com.aventstack.extentreports.reporter.ExtentSparkReporter;
-
-
 
 public class BasePage {
 
-//	public static ExtentSparkReporter htmlReporter;
-//	public static ExtentReports extent;
-//	public static ExtentTest test;
 	public static WebDriver driver = null;
 	public static String browserName = null;
 	public static String url = null;
@@ -41,7 +33,7 @@ public class BasePage {
 		case "chrome": 
 			driver = new ChromeDriver();
 		break;
-		case "firefox":   //not working, need to check the path of browser/driver
+		case "firefox":   
 			System.setProperty("webdriver.gecko.driver", "C:\\Users\\snehagupta01\\Downloads\\geckodriver-v0.31.0-win64\\geckodriver.exe");
 			FirefoxOptions options = new FirefoxOptions();
 			options.setProfile(new FirefoxProfile());

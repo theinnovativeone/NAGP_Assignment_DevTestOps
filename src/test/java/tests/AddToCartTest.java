@@ -1,25 +1,3 @@
-//package tests;
-//
-//import org.testng.annotations.Test;
-//import org.testng.annotations.BeforeMethod;
-//import org.testng.annotations.AfterMethod;
-//
-//public class AddToCartTest {
-//  
-//	@BeforeMethod
-//	public void setup(ITestContext context) throws InterruptedException {
-//		driver = setupDriver(driver, context);
-//	}
-//
-//  @Test
-//  public void f() {
-//  }
-//  
-//  @AfterMethod
-//  public void afterMethod() {
-//  }
-//
-//}
 package tests;
 
 import org.testng.annotations.Test;
@@ -44,7 +22,7 @@ public class AddToCartTest extends BasePage {
 		driver = setupDriver(driver, context);
 	}
 
-	@Test
+	@Test(priority = 4, description = "This test valids add to cart functionality")
 	public void verifyAddToCartFunctionality() throws InterruptedException {
 		login = new LoginPage(driver);
 		addToCart = new AddToCartPage(driver);

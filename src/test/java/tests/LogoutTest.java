@@ -1,47 +1,3 @@
-//package tests;
-//
-//import org.testng.annotations.Test;
-//import org.testng.annotations.BeforeMethod;
-//import org.testng.annotations.AfterMethod;
-//
-//public class LogoutTest {
-// 
-//  @BeforeMethod
-//  public void beforeMethod() {
-//  }
-//
-//  @Test
-//  public void f() {
-//  }
-//  
-//  @AfterMethod
-//  public void afterMethod() {
-//  }
-//
-//}
-
-//package tests;
-//
-//import org.testng.annotations.Test;
-//import org.testng.annotations.BeforeMethod;
-//import org.testng.annotations.AfterMethod;
-//
-//public class AddToCartTest {
-//
-//	@BeforeMethod
-//	public void setup(ITestContext context) throws InterruptedException {
-//		driver = setupDriver(driver, context);
-//	}
-//
-//@Test
-//public void f() {
-//}
-//
-//@AfterMethod
-//public void afterMethod() {
-//}
-//
-//}
 package tests;
 
 import org.testng.annotations.Test;
@@ -66,7 +22,7 @@ public class LogoutTest extends BasePage {
 		driver = setupDriver(driver, context);
 	}
 
-	@Test
+	@Test(priority = 5, description = "This test valids logout functionality")
 	public void verifyAddToCartFunctionality() throws InterruptedException {
 		login = new LoginPage(driver);
 		logout = new LogoutPage(driver);

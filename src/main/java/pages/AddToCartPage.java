@@ -30,7 +30,7 @@ public class AddToCartPage extends BasePage {
 	
 	public void addToCart() throws InterruptedException {
 		
-		Thread.sleep(6000);
+		Thread.sleep(1000);
 		addToCartButton.click();
 		
 	}

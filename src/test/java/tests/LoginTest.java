@@ -20,7 +20,7 @@ public class LoginTest extends BasePage {
 		driver = setupDriver(driver, context);
 	}
 
-	@Test
+	@Test(priority = 0, description = "This test valids whether user is able to login with valid credentials")
 	public void verifyLoginWithValidCredentials() throws InterruptedException {
 		loginPage = new LoginPage(driver);
 
@@ -31,7 +31,7 @@ public class LoginTest extends BasePage {
 		Assert.assertTrue(actualTitle.equals(expectedTitle));
 	}
 	
-	@Test
+	@Test(priority = 1, description = "This test valids whether user is able to login with invalid credentials")
 	public void verifyLoginWithInvalidCredentials() throws InterruptedException {
 		loginPage = new LoginPage(driver);
 
@@ -42,7 +42,7 @@ public class LoginTest extends BasePage {
 		Assert.assertTrue(actualTitle.equals(expectedTitle));
 	}
 	
-	@Test
+	@Test(priority = 3, description = "This test valids whether user is able to login with invalid username")
 	public void verifyLoginWithInvalidUsername() throws InterruptedException {
 		loginPage = new LoginPage(driver);
 
@@ -53,7 +53,7 @@ public class LoginTest extends BasePage {
 		Assert.assertTrue(actualTitle.equals(expectedTitle));
 	}
 	
-	@Test
+	@Test(priority = 2, description = "This test valids whether user is able to login with invalid password")
 	public void verifyLoginWithInvalidPassword() throws InterruptedException {
 		loginPage = new LoginPage(driver);
 
