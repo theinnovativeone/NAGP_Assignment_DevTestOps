@@ -22,7 +22,7 @@ public class AddToCartTest extends BasePage {
 		driver = setupDriver(driver, context);
 	}
 
-	@Test(priority = 4, description = "This test valids add to cart functionality")
+	@Test(priority = 4, description = "This test valids add to cart functionality on products page")
 	public void verifyAddToCartFunctionality() throws InterruptedException {
 		login = new LoginPage(driver);
 		addToCart = new AddToCartPage(driver);
