@@ -35,20 +35,20 @@ pipeline{
 		}
 		stage("Publish to artifactory"){
 			steps{
-				rtMavenDeployer{
-					id: 'test',
+				rtMavenDeployer(
+					id: 'deployer',
 					serverId: 'JFrogArt_test',
 					releaseRepo: 'NAGP_Pipeline_Project',
 					snapshotRepo: 'NAGP_Pipeline_Project'
-				}
-				rtMavenRun{
+				)
+				rtMavenRun(
 					pom: 'pom.xml',
 					goals: 'clean install',
-					deployerId: 'test'
-				}
-				rtPublishBuildInfo{
+					deployerId: 'deployer'
+				)
+				rtPublishBuildInfo(
 					serverId: 'JFrogArt_test'
-				}
+				)
 			}
 		}
 	}
