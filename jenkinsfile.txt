@@ -1,0 +1,55 @@
+pipeline{
+	agent any
+		environment{
+			notifyEmail = "sneha.gupta01@nagarro.com"
+		}
+	tools{
+		maven 'MAVEN_HOME'
+	}
+	triggers{
+		cron('0 06 * * *')
+	}
+	stages{
+		stage("code checkout"){
+			steps{
+				bat "echo hello"
+			}
+		}
+		stage("code build"){
+			steps{
+				bat "mvn clean"
+			}
+		}
+		stage("unit test"){
+			steps{
+				bat "mvn test"
+			}
+		}
+		stage('Static Analysis') {
+			steps{
+      				withSonarQubeEnv('Test_SonarQube_Jenkins'){
+        				bat 'mvn clean package sonar:sonar
+   					echo 'Static Analysis Completed' 
+      				}
+			}
+		}
+		stage("Publish to artifactory"){
+			steps{
+				rtMavenDeployer{
+					id: 'deployer',
+					serverId: 'JFrogArt_test',
+					releaseRepo: 'NAGP_Pipeline_Project',
+					snapshotRepo: 'NAGP_Pipeline_Project'
+				}
+				rtMavenRun{
+					pom: 'pom.xml',
+					goals: 'clean install',
+					deployerId: 'deployer'
+				}
+				rtPublishBuildInfo{
+					serverId: 'JFrogArt_test'
+				}
+			}
+		}
+	}
+}
