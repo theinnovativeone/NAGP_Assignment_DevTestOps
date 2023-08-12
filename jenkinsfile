@@ -17,7 +17,7 @@ pipeline{
 				bat "mvn clean"
 			}
 		}
-		stage("unit test"){
+		stage("Test"){
 			steps{
 				bat "mvn test"
 			}
@@ -31,7 +31,13 @@ pipeline{
       				}
 			}
 		}
-		stage("Publish to artifactory"){
+		stage("Quality gate") {
+            		steps {
+				echo 'Starting SonarQube Quality Gate!'
+                		waitForQualityGate abortPipeline: true
+            		}
+        	}
+		stage("Publish to Artifactory"){
 			steps{
 				echo 'Uploading binaries to the artifactory!'
 				rtMavenDeployer(
