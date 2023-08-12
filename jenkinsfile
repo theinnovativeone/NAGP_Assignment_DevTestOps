@@ -1,8 +1,5 @@
 pipeline{
 	agent any
-		environment{
-			notifyEmail = "sneha.gupta01@nagarro.com"
-		}
 	tools{
 		maven 'Maven3'
 	}
@@ -10,12 +7,12 @@ pipeline{
 		cron('0 06 * * *')
 	}
 	stages{
-		stage("code checkout"){
+		stage("Code Checkout"){
 			steps{
 				bat "echo hello"
 			}
 		}
-		stage("code build"){
+		stage("Code Build"){
 			steps{
 				bat "mvn clean"
 			}
@@ -25,16 +22,18 @@ pipeline{
 				bat "mvn test"
 			}
 		}
-		stage('Static Analysis') {
+		stage('SonarQube Analysis') {
 			steps{
+				echo 'Starting SonarQube Analysis!'
       				withSonarQubeEnv('Test_SonarQube_Jenkins'){
         				bat 'mvn clean verify sonar:sonar'
-   					echo 'Static Analysis Completed' 
+   					echo 'SonarQube Analysis Completed' 
       				}
 			}
 		}
 		stage("Publish to artifactory"){
 			steps{
+				echo 'Uploading binaries to the artifactory!'
 				rtMavenDeployer(
 					id: 'deployer',
 					serverId: 'JFrogArt_test',
@@ -49,7 +48,16 @@ pipeline{
 				rtPublishBuildInfo(
 					serverId: 'JFrogArt_test'
 				)
+				echo 'All the binaries are uploaded!'
 			}
 		}
 	}
+	post {
+        	always {
+			echo 'Sending mail regarding pipeline build results!'
+            		emailext body: 'Test Message',
+    			subject: 'Pipeline build results',
+    			to: 'guptasneha2099@gmail.com'        
+		}
+    	}
 }
