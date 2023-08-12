@@ -36,7 +36,6 @@ pipeline{
 		stage("Publish to artifactory"){
 			steps{
 				rtMavenDeployer{
-					id: 'test',
 					serverId: 'JFrogArt_test',
 					releaseRepo: 'NAGP_Pipeline_Project',
 					snapshotRepo: 'NAGP_Pipeline_Project'
