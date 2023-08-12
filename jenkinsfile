@@ -28,7 +28,7 @@ pipeline{
 		stage('Static Analysis') {
 			steps{
       				withSonarQubeEnv('Test_SonarQube_Jenkins'){
-        				bat 'mvn clean package sonar:sonar
+        				bat 'mvn clean package sonar:sonar'
    					echo 'Static Analysis Completed' 
       				}
 			}
