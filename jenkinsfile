@@ -4,7 +4,7 @@ pipeline{
 		maven 'Maven3'
 	}
 	triggers{
-		cron('0 06 * * *')
+		cron('H/30 * * * *')
 	}
 	stages{
 		stage("Code Checkout"){
@@ -68,11 +68,14 @@ pipeline{
 		}
 	}
 	post {
-        	always {
-			echo 'Sending mail regarding pipeline build results!'
-            		emailext body: 'Test Message',
-    			subject: 'Pipeline build results',
-    			to: 'guptasneha2099@gmail.com'        
+	        success {
+			echo "Hurray, the current build is succeeded."
+	        }
+		failure {
+			echo "Oops, the current build is failed."
+	        }
+		aborted {
+			echo "The build process is aborted."
 		}
     	}
 }
