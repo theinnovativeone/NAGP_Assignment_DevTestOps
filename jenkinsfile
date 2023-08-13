@@ -26,7 +26,7 @@ pipeline{
 			steps{
 				echo 'Starting SonarQube Analysis!'
       				withSonarQubeEnv('Test_SonarQube_Jenkins'){
-        				bat 'mvn clean verify sonar:sonar'
+        				bat 'mvn sonar:sonar'
    					echo 'SonarQube Analysis Completed' 
       				}
 			}
